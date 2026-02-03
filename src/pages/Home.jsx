@@ -105,7 +105,7 @@ function HomeCards() {
 						Webová aplikace je udělána přes Javascript framework zvaný React. Dále projekt používá na stylování SASS a&nbsp;pro animaci AnimeJS. Postava mráčku se jmenuje Alex.
 					</Paragraph>
 					<br />
-					<img className="homeCards__aboutImage" src="../../assets/illu-surp.svg" loading="lazy" fetchPriority="high" />
+					<img className="homeCards__aboutImage" src="./assets/illu-surp.svg" loading="lazy" fetchPriority="high" />
 				</div>
 			</Card>
 		</div>
@@ -122,7 +122,7 @@ function HomeMainScroll() {
 
 	return (
 		<a className="homeMainScroll" to="info" onClick={_scroll}>
-			<img src="../../assets/scroll.svg" alt="Dolů" width="30px" loading="lazy" fetchPriority="high" />
+			<img src="./assets/scroll.svg" alt="Dolů" width="30px" loading="lazy" fetchPriority="high" />
 		</a>
 	);
 }

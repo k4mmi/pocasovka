@@ -29,7 +29,7 @@ export function ScrollUp() {
 
     return(
         <button className={`scrollUp ${className}`} onClick={() => animateScroll.scrollToTop( {duration: 1000, smooth: true,} )} title="Vrátit se nahoru"  loading="lazy" fetchPriority="high">
-            <img className="scrollUp__image" src="../../assets/scrollUp.svg"/>
+            <img className="scrollUp__image" src="./assets/scrollUp.svg"/>
         </button>
     );
 }

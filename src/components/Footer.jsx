@@ -8,7 +8,7 @@ export function Footer() {
                 <NavBottom/>
             </div>
             <div className="footer__cloudWrapper">
-                <img className="footer__img" src="../../assets/logo.svg" loading="lazy" fetchPriority="high"/>
+                <img className="footer__img" src="./assets/logo.svg" loading="lazy" fetchPriority="high"/>
             </div>
         </footer>
     );

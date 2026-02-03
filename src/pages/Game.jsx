@@ -127,7 +127,7 @@ function GamePanel() {
                     <GameInfo name="Skóre:" id="score" altId="scoreGain" />
                 </div>
                 <div className="gamePanel__main">
-                    <img src={`../../assets/illu-bird.svg`} alt="Mrak Alex" className="gamePanel__illustration" loading="lazy" fetchPriority="high" />
+                    <img src={`./assets/illu-bird.svg`} alt="Mrak Alex" className="gamePanel__illustration" loading="lazy" fetchPriority="high" />
                     <div className="gamePanel__mainWrapper gamePanel__mainWrapper-1">
                         <GameInfo name="Místo:" id="place" classNameValue="gamePanel__cityName" />
                         <GameInfo name="Místní čas:" id="time" />
@@ -137,7 +137,7 @@ function GamePanel() {
                     </div>
                 </div>
                 <button className="gamePanel__next" onClick={() => { result(); }} type="submit">
-                    <img className="gamePanel__arrow" src="../../assets/next.svg" loading="lazy" fetchPriority="high" />
+                    <img className="gamePanel__arrow" src="./assets/next.svg" loading="lazy" fetchPriority="high" />
                 </button>
             </div>
         </div>

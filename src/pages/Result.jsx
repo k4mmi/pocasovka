@@ -55,7 +55,7 @@ export function Result() {
 					Zpátky
 				</Button>
 				<Button color="green" to="/game">
-					<img src={`../../assets/illu-${birdStatus}.svg`} alt="Mrak Alex" className="result__illustration" loading="lazy" fetchPriority="high" />
+					<img src={`./assets/illu-${birdStatus}.svg`} alt="Mrak Alex" className="result__illustration" loading="lazy" fetchPriority="high" />
 					Hrát znovu
 				</Button>
 			</div>
