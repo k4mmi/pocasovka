@@ -1,0 +1,9 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.subHeading {
+    @include fontBold;
+    @include fontSubHeading;
+    line-height: 120%;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,154 @@
+@use './variables' as *;
+
+@mixin shadowFrame {
+    border-radius: $borderRadius;
+    border: $borderSize solid $color1-solid;
+    box-shadow: 10px 12px 0 0.5px $color1-solid;
+    transition: $animationSpeedFast;
+}
+
+@mixin shadowFrameButton {
+    &:active {
+        border-radius: $borderRadius;
+        border: $borderSize solid $color1-solid;
+        box-shadow: 0px 0px 0 0.5px $color1-solid;
+        translate: 12px 12px;
+    }
+}
+
+@mixin frame {
+    border-radius: $borderRadius;
+    border: $borderSize solid $color1-solid;
+    box-shadow: 0px 0px 0 0.5px $color1-solid inset;
+    transition: $animationSpeedFast;
+}
+
+@mixin frameButton {
+    &:active {
+        border-radius: $borderRadius;
+        border: $borderSize solid $color1-solid;
+        box-shadow: 6px 6px 0 0.5px $color1-solid inset;
+
+        &>* {
+            translate: 6px 6px;
+        }
+    }
+}
+
+@mixin cardPadding {
+    padding: $spaceLarge;
+}
+
+@mixin fontRegular {
+    font-family: "merriweatherRegular", serif;
+
+    * {
+        font-family: "merriweatherRegular", serif;
+    }
+}
+
+@mixin fontBold {
+    font-family: "merriweatherBold", serif;
+
+    * {
+        font-family: "merriweatherBold", serif;
+    }
+}
+
+@mixin fontBlack {
+    font-family: "merriweatherBlack", serif;
+
+    * {
+        font-family: "merriweatherBlack", serif;
+    }
+}
+
+@mixin fontHuge {
+    font-size: 180px;
+    transition: $animationSpeedNormal font-size;
+
+    @media (width <=$responsiveLarge) {
+        font-size: 14vw;
+    }
+
+    * {
+        font-size: 180px;
+        transition: $animationSpeedNormal font-size;
+
+        @media (width <=$responsiveLarge) {
+            font-size: 14vw;
+        }
+    }
+}
+
+@mixin fontHugeShort {
+    font-size: 180px;
+    transition: $animationSpeedNormal font-size;
+
+    @media (width <=$responsiveLarge) {
+        font-size: 24vw;
+    }
+
+    * {
+        font-size: 180px;
+        transition: $animationSpeedNormal font-size;
+
+        @media (width <=$responsiveLarge) {
+            font-size: 24vw;
+        }
+    }
+}
+
+@mixin fontParagraph {
+    font-size: 18px;
+    transition: $animationSpeedNormal font-size;
+
+    @media (width <=$responsiveSmall) {
+        font-size: 16px;
+    }
+
+    * {
+        font-size: 18px;
+        transition: $animationSpeedNormal font-size;
+
+        @media (width <=$responsiveSmall) {
+            font-size: 16px;
+        }
+    }
+}
+
+@mixin fontHeading {
+    font-size: 52px;
+    transition: $animationSpeedNormal font-size;
+
+    @media (width <=$responsiveSmall) {
+        font-size: 46px;
+    }
+
+    * {
+        font-size: 52px;
+        transition: $animationSpeedNormal font-size;
+
+        @media (width <=$responsiveSmall) {
+            font-size: 46px;
+        }
+    }
+}
+
+@mixin fontSubHeading {
+    font-size: 36px;
+    transition: $animationSpeedNormal font-size;
+
+    @media (width <=$responsiveSmall) {
+        font-size: 30px;
+    }
+
+    * {
+        font-size: 36px;
+        transition: $animationSpeedNormal font-size;
+
+        @media (width <=$responsiveSmall) {
+            font-size: 30px;
+        }
+    }
+}

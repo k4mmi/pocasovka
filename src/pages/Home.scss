@@ -1,0 +1,68 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.home {
+    display: flex;
+    flex-direction: column;
+    max-width: $pageWidth;
+    margin: 0 auto;
+    padding: 0 $spaceLarge;
+
+    &Main {
+        height: calc(100vh - $header );
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: $header;
+        gap: $spaceExtraLarge;
+        // position: relative;
+
+        &__heading {
+            @include fontBlack;
+            @include fontHuge;
+            color: $color1-solid;
+        }
+
+        &Scroll {
+            position: absolute;
+            bottom: $spaceExtraLarge;
+            border-radius: $borderRadius;
+            height: 60px;
+            width: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: $animationSpeedFast background;
+
+            &:hover {
+                background: $color3alt-solid;
+            }
+        }
+    }
+
+    &Cards {
+        padding: calc($spaceExtraLarge * 2) 0;
+        gap: $spaceExtraLarge;
+        display: grid;
+        grid-template-areas: "a b" "c d";
+        /* 2x2 */
+
+        @media (width <= $responsiveLarge) {
+            gap: $spaceLarge;
+        }
+
+        @media (width <= $responsiveMedium) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__aboutImage {
+            width: 70px;
+            position: absolute;
+            bottom: $spaceMedium;
+            right: $spaceMedium;
+        }
+    }
+
+}

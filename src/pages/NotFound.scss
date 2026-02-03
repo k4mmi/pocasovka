@@ -1,0 +1,19 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.notFound {
+    max-width: $pageWidth;
+    margin: 0 auto;
+    height: calc( 100vh - $header );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: calc( $header + $spaceExtraLarge );
+
+    &__image {
+        width: 100%;
+        max-width: 500px;
+        padding: $spaceLarge;
+    }
+}

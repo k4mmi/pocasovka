@@ -1,0 +1,391 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.game {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: $spaceExtraLarge;
+    position: relative;
+    align-items: center;
+
+    @media (width <=$responsiveSmall) {
+        gap: $spaceLarge;
+    }
+
+    &Input {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        gap: 10px;
+        position: relative;
+        width: calc(100% - $spaceExtraLarge);
+        margin-right: $spaceExtraLarge;
+        margin-left: $spaceExtraLarge;
+
+        @media (width >$responsiveLarge) {
+            margin-bottom: $spaceLarge;
+        }
+
+        &__main {
+            max-width: $pageWidth;
+            display: flex;
+            flex-wrap: nowrap;
+            padding: $spaceMedium;
+        }
+
+        &__fakeField {
+            @include fontHugeShort;
+            @include fontBlack;
+            user-select: none;
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        &__field {
+            @include fontHugeShort;
+            @include fontBlack;
+            // caret-color: transparent;
+            caret-color: $color3alt-solid;
+            min-width: 50px;
+            text-align: right;
+            text-overflow: clip;
+
+            @media (width > $responsiveMedium) {
+                margin-bottom: $spaceLarge;
+            }
+
+            &:before {
+                content: "\200A";
+            }
+
+            & br {
+                display: inline;
+            }
+
+            &::placeholder {
+                color: $color1-trans2;
+                opacity: 1;
+            }
+
+            /* Chrome, Safari, Edge, Opera */
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+
+            /* Firefox */
+            &[type=number] {
+                appearance: textfield;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        &__text {
+            @include fontHugeShort;
+            @include fontBlack;
+            display: inline;
+            height: min-content;
+        }
+    }
+
+    &Panel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: $spaceLarge;
+        width: 100%;
+        position: relative;
+        opacity: 1;
+        transition: $animationSpeedExtraSlow opacity;
+
+        &__container {
+            max-width: $pageWidth;
+            margin-left: $spaceLarge;
+            margin-right: $spaceLarge;
+            width: 100%;
+            display: grid;
+            gap: $spaceLarge;
+            height: min-content;
+            align-items: center;
+            grid-template-columns: 200px 1fr 200px;
+
+            @media (width <=$responsiveLarge) {
+                grid-template-columns: 1fr 1fr;
+                height: auto;
+            }
+        }
+
+        &__score {
+            background: $color2-solid;
+            @include shadowFrame;
+            width: 150px;
+            height: 80px;
+            padding: 0 $spaceLarge;
+            display: flex;
+            align-items: center;
+            grid-column: 1;
+            grid-row: 1;
+            width: 100%;
+
+            @media (width <=$responsiveLarge) {
+                grid-column: 1;
+                grid-row: 2;
+            }
+        }
+
+        &__main {
+            @include shadowFrame;
+            background: $color2-solid;
+            width: 100%;
+            // height: 80px;
+            padding: $spaceMedium $spaceLarge;
+            display: flex;
+            align-items: center;
+            gap: $spaceLarge;
+            justify-content: space-between;
+            grid-column: 2;
+            grid-row: 1;
+            position: relative;
+
+            @media (width <=$responsiveLarge) {
+                grid-column: 1/3;
+                grid-row: 1;
+            }
+
+            @media (width <=$responsiveSmall) {
+                align-items: flex-end;
+            }
+
+        }
+
+        &__mainWrapper {
+
+            &-1 {
+                @media (width <=$responsiveLarge) {
+                    width: 100%;
+                }
+            }
+
+            &-2 {
+                @media (width <=$responsiveLarge) {
+                    position: absolute;
+                    right: $spaceLarge;
+                }
+            }
+        }
+
+        &__next {
+            @include shadowFrame;
+            @include shadowFrameButton;
+            background: $color4-solid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            min-height: 80px;
+            grid-column: 3 / 3;
+            grid-row: 1;
+            width: 100%;
+
+            @media (width <=$responsiveLarge) {
+                grid-column: 2 / 2;
+                grid-row: 2;
+            }
+        }
+
+        &__mainWrapper {
+            display: flex;
+            flex-direction: row;
+            gap: $spaceLarge;
+
+            @media (width <=$responsiveSmall) {
+                gap: $spaceMedium;
+                flex-direction: column;
+            }
+        }
+
+        &__arrow {
+            width: 24px;
+        }
+
+        &__illustration {
+            width: 80px;
+            pointer-events: none;
+            user-select: none;
+            position: absolute;
+            top: -65px;
+            left: 0px;
+
+            @media (width <=$responsiveSmall) {
+                right: -24vw;
+            }
+        }
+    }
+
+    &Info {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+
+        &__name {
+            @include fontRegular;
+            font-size: 15px;
+            color: $color1-trans1;
+            text-wrap: nowrap;
+
+            @media (width <=$responsiveSmall) {
+                font-size: 13px;
+            }
+        }
+
+        &__value {
+            @include fontRegular;
+            font-size: 24px;
+            // color: $color1-solid;
+            display: inline;
+            width: fit-content;
+
+            @media (width <=$responsiveExtraLarge) {
+                overflow: hidden;
+                text-wrap: nowrap;
+                text-overflow: ellipsis;
+            }
+
+            @media (width <=$responsiveSmall) {
+                font-size: 20px;
+                max-width: 100%;
+            }
+        }
+
+        &__altValue {
+            @include fontBold;
+            font-size: 24px;
+            color: $color1-solid;
+            // width: 100%;
+            display: inline;
+            margin-left: $spaceExtraSmall;
+
+            @media (width <=$responsiveSmall) {
+                font-size: 20px;
+                // max-width: 100%;
+            }
+        }
+
+        &__altValueAnimation {
+            display: inline;
+            opacity: 1;
+            animation: altValueVisible forwards 3500ms;
+            transition: $animationSpeedNormal opacity, translate $animationSpeedNormal;
+
+            @keyframes altValueVisible {
+                0% {
+                    opacity: 0;
+                    translate: 10px 0;
+                }
+
+                10% {
+                    opacity: 1;
+                    translate: 0 0;
+                }
+
+                60% {
+                    opacity: 1;
+                    translate: 0 0;
+                }
+
+                100% {
+                    opacity: 0;
+                    translate: 0 0;
+                }
+            }
+        }
+
+        &__wrapper {
+            text-wrap: nowrap;
+            display: flex;
+            gap: $spaceExtraSmall;
+            max-width: 100%;
+        }
+    }
+
+    &Result {
+        position: absolute;
+        bottom: 0;
+        max-width: 150px;
+        width: 100%;
+
+        &__box {
+            @include shadowFrame;
+            display: flex;
+            justify-content: center;
+            padding: $spaceMedium;
+            padding: $spaceSmall;
+            background: $color2-solid;
+            flex-direction: column;
+            gap: $spaceExtraSmall;
+            animation: resultBox forwards 5000ms;
+
+            @keyframes resultBox {
+                0% {
+                    opacity: 0;
+                    translate: 0 20px;
+                }
+
+                10% {
+                    opacity: 1;
+                    translate: 0 0;
+                }
+
+                60% {
+                    opacity: 1;
+                    translate: 0 0;
+                }
+
+                100% {
+                    opacity: 0;
+                    translate: 0 0;
+                }
+            }
+        }
+
+        &__section {
+            text-align: center;
+        }
+
+        &__place {
+            color: $color1-solid;
+            @include fontRegular;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        &__unit {
+            color: $color1-solid;
+            @include fontRegular;
+            font-size: 22px;
+        }
+
+        &__result {
+            color: $color1-solid;
+            @include fontRegular;
+            font-size: 22px;
+        }
+    }
+}
+
+// Not standard but I wanna overwrite it
+.gamePanel__cityName {
+    @media (width <=$responsiveSmall) {
+        @include fontBold;
+        font-size: 22px;
+    }
+}

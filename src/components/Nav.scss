@@ -1,0 +1,53 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.nav {
+    @include shadowFrame;
+    @include cardPadding;
+    padding-top: $spaceExtraSmall;
+    padding-bottom: 0;
+    background: $color2-solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+    height: 80px;
+    pointer-events: all;
+
+    &__section {
+        display: flex;
+        flex-direction: row;
+        gap: $spaceLarge;
+        position: relative;
+
+        &-left * {
+            @include fontBlack;
+            font-size: 24px;
+        }
+
+        &-center * {
+            @media (width <=$responsiveSmall) {
+                visibility: hidden;
+            }
+        }
+    }
+
+    &__link {
+        overflow: hidden;
+        height: 30px;
+
+        &Animation {
+            transition: $animationSpeedNormal translate ease-in-out;
+            translate: 0 -100%;
+            height: 50%;
+            height: 30px;
+            text-wrap: nowrap;
+        }
+
+        &:hover &Animation-1,
+        &:hover &Animation-2 {
+            translate: 0 0;
+        }
+    }
+}

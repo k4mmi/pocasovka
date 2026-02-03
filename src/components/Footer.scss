@@ -1,0 +1,39 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.footer {
+    height: $header;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // margin-bottom: calc(250px);
+    flex-direction: column;
+    height: 300px;
+    gap: $spaceMedium;
+    overflow: hidden;
+    padding-left: $spaceLarge;
+    padding-right: $spaceLarge;
+
+    &__navWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    
+    &__cloudWrapper {
+        height: 300px;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        max-height: 30vw;
+    }
+    
+    &__img {
+        width: 100%;
+        max-width: 800px;
+        padding-left: $spaceLarge;
+        padding-right: $spaceLarge;
+    }
+}

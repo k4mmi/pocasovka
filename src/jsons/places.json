@@ -1,0 +1,248 @@
+{
+    "prague": {
+        "name": "Praha",
+        "state": "Česko",
+        "latitude": 50.0874654,
+        "longitude": 14.4212535
+    },
+    "berlin": {
+        "name": "Berlín",
+        "state": "Německo",
+        "latitude": 52.5173885,
+        "longitude": 13.3951309
+    },
+    "paris": {
+        "name": "Paříž",
+        "state": "Francie",
+        "latitude": 48.8534951,
+        "longitude": 2.3483915
+    },
+    "london": {
+        "name": "Londýn",
+        "state": "Spojené království",
+        "latitude": 51.5074456,
+        "longitude": -0.1277653
+    },
+    "rome": {
+        "name": "Řím",
+        "state": "Itálie",
+        "latitude": 41.8933203,
+        "longitude": 12.4829321
+    },
+    "madrid": {
+        "name": "Madrid",
+        "state": "Španělsko",
+        "latitude": 40.4167820,
+        "longitude": -3.7035070
+    },
+    "brussels": {
+        "name": "Brusel",
+        "state": "Belgie",
+        "latitude": 50.8467372,
+        "longitude": 4.3524930
+    },
+    "moscow": {
+        "name": "Moskva",
+        "state": "Rusko",
+        "latitude": 55.6255780,
+        "longitude": 37.6063916
+    },
+    "amsterdam": {
+        "name": "Amsterdam",
+        "state": "Nizozemí",
+        "latitude": 52.3730796,
+        "longitude": 4.8924534
+    },
+    "stockholm": {
+        "name": "Stockholm",
+        "state": "Švédsko",
+        "latitude": 59.3251172,
+        "longitude": 18.0710935
+    },
+    "new_york": {
+        "name": "New York",
+        "state": "Spojené státy",
+        "latitude": 40.7127281,
+        "longitude": -74.0060152
+    },
+    "toronto": {
+        "name": "Toronto",
+        "state": "Kanada",
+        "latitude": 43.6534817,
+        "longitude": -79.3839347
+    },
+    "los_angeles": {
+        "name": "Los Angeles",
+        "state": "Spojené státy",
+        "latitude": 34.0536909,
+        "longitude": -118.2427660
+    },
+    "chicago": {
+        "name": "Chicago",
+        "state": "Spojené státy",
+        "latitude": 41.8755616,
+        "longitude": -87.6244212
+    },
+    "mexico_city": {
+        "name": "Mexico City",
+        "state": "Mexiko",
+        "latitude": 19.3207722,
+        "longitude": -99.1514678
+    },
+    "vancouver": {
+        "name": "Vancouver",
+        "state": "Kanada",
+        "latitude": 45.6306954,
+        "longitude": -122.6744557
+    },
+    "sao_paulo": {
+        "name": "São Paulo",
+        "state": "Brazílie",
+        "latitude": -23.5506507,
+        "longitude": -46.6333824
+    },
+    "buenos_aires": {
+        "name": "Buenos Aires",
+        "state": "Argentina",
+        "latitude": -34.6095579,
+        "longitude": -58.3887904
+    },
+    "rio_de_janeiro": {
+        "name": "Rio de Janeiro",
+        "state": "Brazílie",
+        "latitude": -22.9110137,
+        "longitude": -43.2093727
+    },
+    "havana": {
+        "name": "Havana",
+        "state": "Kuba",
+        "latitude": 23.1353050,
+        "longitude": -82.3589631
+    },
+    "santiago": {
+        "name": "Santiago",
+        "state": "Chile",
+        "latitude": -33.4377756,
+        "longitude": -70.6504502
+    },
+    "lagos": {
+        "name": "Lagos",
+        "state": "Nigérie",
+        "latitude": 6.4550575,
+        "longitude": 3.3941795
+    },
+    "cape_town": {
+        "name": "Cape Town",
+        "state": "Jižní Afrika",
+        "latitude": -33.9288301,
+        "longitude": 18.4172197
+    },
+    "kahira": {
+        "name": "Káhira",
+        "state": "Egypt",
+        "latitude": 30.0443879,
+        "longitude": 31.2357257
+    },
+    "tunis": {
+        "name": "Tunis",
+        "state": "Tunisko",
+        "latitude": 36.8002068,
+        "longitude": 10.1857757
+    },
+    "istambul": {
+        "name": "Istambul",
+        "state": "Turecko",
+        "latitude": 41.0063810,
+        "longitude": 28.9758715
+    },
+    "tokio": {
+        "name": "Tokio",
+        "state": "Japonsko",
+        "latitude": 35.6768601,
+        "longitude": 139.7638947
+    },
+    "peking": {
+        "name": "Peking",
+        "state": "Čína",
+        "latitude": 39.9057136,
+        "longitude": 116.3912972
+    },
+    "shanghai": {
+        "name": "Shanghai",
+        "state": "Čína",
+        "latitude": 31.2312707,
+        "longitude": 121.4700152
+    },
+    "hanoj": {
+        "name": "Hanoj",
+        "state": "Vietnam",
+        "latitude": 21.0283334,
+        "longitude": 105.8540410
+    },
+    "delhi": {
+        "name": "Delhi",
+        "state": "Indie",
+        "latitude": 28.6138954,
+        "longitude": 77.2090057
+    },
+    "dubaj": {
+        "name": "Dubaj",
+        "state": "Spojené arabské emiráty",
+        "latitude": 25.0742823,
+        "longitude": 55.1885387
+    },
+    "teheran": {
+        "name": "Teherán",
+        "state": "Írán",
+        "latitude": 35.6892523,
+        "longitude": 51.3896004
+    },
+    "singapur": {
+        "name": "Singapur",
+        "state": "Singapur",
+        "latitude": 1.2899175,
+        "longitude": 103.8519072
+    },
+    "jakarta": {
+        "name": "Jakarta",
+        "state": "Indonésie",
+        "latitude": -6.1754049,
+        "longitude": 106.8271680
+    },
+    "manila": {
+        "name": "Manila",
+        "state": "Filipíny",
+        "latitude": 14.5904492,
+        "longitude": 120.9803621
+    },
+    "osaka": {
+        "name": "Ósaka",
+        "state": "Japonsko",
+        "latitude": 34.6937569,
+        "longitude": 135.5014539
+    },
+    "pchjongjang": {
+        "name": "Pchjongjang",
+        "state": "Severní Korea",
+        "latitude": 39.0167979,
+        "longitude": 125.7473609
+    },
+    "soul": {
+        "name": "Soul",
+        "state": "Jižní Korea",
+        "latitude": 37.5666791,
+        "longitude": 126.9782914
+    },
+    "sydney": {
+        "name": "Sydney",
+        "state": "Austrálie",
+        "latitude": -33.8698439,
+        "longitude": 151.2082848
+    },
+    "auckland": {
+        "name": "Auckland",
+        "state": "Nový Zéland",
+        "latitude": -36.8520950,
+        "longitude": 174.7631803
+    }
+}

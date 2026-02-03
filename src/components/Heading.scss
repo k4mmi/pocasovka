@@ -1,0 +1,8 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.heading {
+    @include fontBlack;
+    @include fontHeading;
+    margin-bottom: 20px;
+}

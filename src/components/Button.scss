@@ -1,0 +1,67 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.button {
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 $spaceLarge;
+    width: min-content;
+    text-wrap: nowrap;
+
+    &-large {
+        height: 80px;
+        min-width: calc(300px + $spaceLarge * 2);
+
+        @media (width <=$responsiveSmall) {
+            width: 80%;
+            min-width: min-content;
+            margin-right: $spaceLarge;
+            margin-left: $spaceLarge;
+            height: 70px;
+        }
+
+        &>* {
+            color: $color1-solid;
+            text-align: center;
+            @include fontBold;
+            font-size: 40px;
+        }
+    }
+
+    &-small {
+        height: 60px;
+        min-width: calc(100px + $spaceLarge * 2);
+
+        @media (width <=$responsiveSmall) {
+            width: 100%;
+        }
+
+        &>* {
+            font-size: 20px;
+        }
+    }
+
+    &-green {
+        background: $color4-solid;
+    }
+
+    &-white {
+        background: $color2-solid;
+    }
+
+    &-blue {
+        background: $color3alt-solid;
+    }
+
+    &-out {
+        @include shadowFrame;
+        @include shadowFrameButton;
+    }
+
+    &-in {
+        @include frame;
+        @include frameButton;
+    }
+}

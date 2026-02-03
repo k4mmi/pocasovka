@@ -1,0 +1,69 @@
+@use './reset' as *;
+@use './variables' as *;
+@use './fonts' as *;
+@use './mixins' as *;
+
+* {
+    box-sizing: border-box;
+    line-height: 1.2; // You will be glad because of this default line hight... you always forget it
+    scrollbar-width: thin;
+    scrollbar-color: $color1-solid $color3-solid;
+    color: $color1-solid;
+    @include fontRegular;
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    // overscroll-behavior: none;
+    background: $color3-solid;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    position: absolute;
+    top: 0;
+}
+
+button,
+a {
+    // Let's make clear what can user click
+    cursor: pointer;
+    transition: $animationSpeedExtraFast scale;
+    user-select: none;
+
+    &:hover {
+        scale: 0.98;
+    }
+}
+
+::selection {
+    color: $color1-solid;
+    background: $color4-solid;
+}
+
+// Hide goofy debug color alts of images 
+img {
+    color: #F0F;
+}
+
+hr {
+    width: 100%;
+    border-bottom: $borderSize solid $color2-solid;
+    margin-top: $spaceLarge;
+    margin-bottom: $spaceLarge;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+#root {
+    margin-top: $header;
+    height: calc(100% - $header);
+}

@@ -1,0 +1,13 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.card {
+    @include shadowFrame;
+    padding: $spaceLarge;
+    min-height: 200px;
+    background: $color2-solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}

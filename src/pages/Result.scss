@@ -1,0 +1,52 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.result {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding-bottom: $spaceLarge;
+
+    &__resultWrapper {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        padding-bottom: $spaceExtraLarge;
+    }
+
+    &__buttonWrapper {
+        display: flex;
+        flex-direction: row;
+        gap: $spaceLarge;
+        justify-content: center;
+        align-items: center;
+        margin: 0 $spaceLarge;
+
+        @media (width <=$responsiveSmall) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__score {
+        @include fontBlack;
+        @include fontHugeShort;
+        // font-size: 200px;
+    }
+
+    &__illustration {
+        width: 80px;
+        pointer-events: none;
+        user-select: none;
+        position: absolute;
+        top: -85px;
+        right: -50px;
+
+        @media (width <=$responsiveSmall) {
+        right: -24vw;
+        }
+    }
+}

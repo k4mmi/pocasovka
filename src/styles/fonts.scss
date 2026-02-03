@@ -1,0 +1,17 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+@font-face {
+    font-family: "merriweatherRegular";
+    src: url(../fonts/merriweather/Merriweather_36pt-Regular.woff2);
+}
+
+@font-face {
+    font-family: "merriweatherBold";
+    src: url(../fonts/merriweather/Merriweather_36pt-Bold.woff2);
+}
+
+@font-face {
+    font-family: "merriweatherBlack";
+    src: url(../fonts/merriweather/Merriweather_36pt-Black.woff2);
+}
