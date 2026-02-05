@@ -7,17 +7,23 @@ import { Paragraph } from "../components/Paragraph";
 
 let navigate;
 
-export function Game() {
 
+export function Game() {
+    
+    const handleSubmit = (e) => {
+        e.preventDefault(); // Stop page refresh  
+    };
+    
     navigate = useNavigate();
 
     useEffect(() => {
         purge();
         setValues();
+
     }, []);
 
     return (
-        <form className="game">
+        <form className="game" onSubmit={handleSubmit}>
             <GameInput />
             <GamePanel />
         </form>
@@ -120,6 +126,22 @@ function GameInput() {
 }
 
 function GamePanel() {
+
+    useEffect(() => {
+
+        const $next = document.getElementById("next")
+
+        $next.addEventListener("click", clickButtonFunction);
+
+        function clickButtonFunction() {
+            result();
+        }
+
+        return () => {
+            $next.removeEventListener("keclickydown", clickButtonFunction);
+        }
+    }, []);
+
     return (
         <div className="gamePanel" id="gamePanel">
             <div className="gamePanel__container">
@@ -136,7 +158,7 @@ function GamePanel() {
                         <GameInfo name="Postup:" id="progress" />
                     </div>
                 </div>
-                <button className="gamePanel__next" onClick={() => { result(); }} type="submit">
+                <button id="next" className="gamePanel__next" type="submit">
                     <img className="gamePanel__arrow" src="./assets/next.svg" loading="lazy" fetchPriority="high" />
                 </button>
             </div>
@@ -212,6 +234,9 @@ async function result() {
 
     const _place = randomPlaceSave;
     const _weatherFetch = await weather(_place.latitude, _place.longitude);
+
+    console.log("result");
+
     const _difference = Math.abs(getFieldData() - _weatherFetch.temp);
     let $score = document.getElementById("score");
     let $scoreGain = document.getElementById("scoreGain");
